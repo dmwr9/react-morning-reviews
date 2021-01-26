@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ListItem({movie}){
+function ListItem({movie, deleteMovie}){
     return <div className="List-Item">
         <img 
             alt={movie.title} 
@@ -10,6 +10,9 @@ function ListItem({movie}){
             <p>{movie.title}</p>
             <p>{movie.year}</p>
         </div>
+        <p className="delete-button" onClick={() => deleteMovie(movie.id)}>
+            X
+        </p>
     </div>
 }
 
